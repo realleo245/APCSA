@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;flower1&apos; in &apos;Picture.myCollage()&apos; to &apos;beach&apos;&#x0D;&#x0A;- Original project: &apos;PictureLab&apos;&#x0D;&#x0A;- Original element: &apos;Picture.myCollage().flower1&apos;&#x0D;&#x0A;- Renamed element: &apos;flower1&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;flower1&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;{Picture.java[Picture~myCollage@flower1!13728!13770!13736!13742!QPicture;!0!false" name="beach" references="true" stamp="1707255224559" version="1.0"/>
+</session>

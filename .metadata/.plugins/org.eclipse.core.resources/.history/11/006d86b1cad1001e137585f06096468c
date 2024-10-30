@@ -1,0 +1,13 @@
+/**
+ * Generates a maze and then solves it
+ * @author s-llian
+ *
+ */
+public class Program {
+	public static final int ROWS = 25;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

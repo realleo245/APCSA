@@ -1,0 +1,13 @@
+import graphics.MazeCanvas;
+
+public class Cell {
+	private MazeCanvas mc;
+	private int row;
+	private int col;
+	
+	public Cell(MazeCanvas mc, int row, int col) {
+		mc.drawCell(row, col);
+		this.row = row;
+		this.col = col;
+	}
+}

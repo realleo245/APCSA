@@ -1,0 +1,52 @@
+import java.awt.Color;
+
+import graphics.MazeCanvas;
+import graphics.MazeCanvas.Side;
+
+public class Maze {
+	public static final Color RED = Color.RED;
+	public static final Color DARK_RED = new Color(150, 0, 0);
+	private MazeCanvas mc;
+	public Maze(MazeCanvas mazeCanvas) {
+		this.mc = mazeCanvas;
+	}
+	public void genSnake() {
+		for(int i = 0; i < mc.getRows(); i++) {
+			for(int j = 0; j < mc.getCols(); j++) {
+				if(i == 0) {
+					if(j % 2 != 0) {
+						mc.drawCell(i, j);
+						mc.eraseWall(i, j, Side.Right);
+						mc.drawCenter(i, j, DARK_RED);
+						mc.drawPath(i, j , Side.Right, RED);
+					}
+					else {
+						mc.drawCell(i, j);
+						mc.eraseWall(i, j, Side.Left);
+					}
+					mc.eraseWall(i, j, Side.Top);
+					mc.eraseWall(i, j, Side.Bottom);
+				} 
+				else if(i == mc.getRows() - 1) {
+					if(j % 2 == 0) {
+						mc.drawCell(i, j);
+						mc.eraseWall(i, j, Side.Right);
+					}
+					else {
+						mc.drawCell(i, j);
+						mc.eraseWall(i, j, Side.Left);
+					}
+				}
+				else {
+					mc.drawCell(i,  j);
+				}
+				mc.eraseWall(i, j, Side.Top);
+				mc.eraseWall(i, j, Side.Bottom);
+				mc.drawCenter(i, j, DARK_RED);
+				mc.drawPath(i, j , Side.Left, RED);
+				mc.drawPath(i, j , Side.Bottom, RED);
+			}
+				
+		}
+	}
+}

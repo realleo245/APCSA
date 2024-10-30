@@ -1,0 +1,29 @@
+import java.awt.Color;
+
+import graphics.MazeCanvas;
+import graphics.MazeCanvas.Side;
+
+public class Maze {
+	public static final Color RED = Color.RED;
+	public static final Color DARK_RED = new Color(150, 0, 0);
+	private MazeCanvas mc;
+	public Maze(MazeCanvas mazeCanvas) {
+		this.mc = mazeCanvas;
+	}
+	public void genSnake() {
+		for(int i = 0; i < mc.getRows(); i++) {
+			for(int j = 0; j < mc.getCols(); j++) {
+				mc.drawCell(i, j);
+				mc.eraseWall(i, j, Side.Top);
+				mc.eraseWall(i, j, Side.Bottom);
+			}
+		}
+		for(int i = 0; i < mc.getCols(); i++) {
+			for(int j = 0; j < mc.getRows(); j++) {
+				if(i % 2 == 0) {
+					
+				}
+			}
+		}
+	}
+}

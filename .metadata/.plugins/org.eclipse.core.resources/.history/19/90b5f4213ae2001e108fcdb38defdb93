@@ -1,0 +1,20 @@
+import java.awt.Color;
+import java.util.ArrayList;
+
+import graphics.MazeCanvas;
+import graphics.MazeCanvas.Side;
+
+public class EdgeCell extends ShadedCell {
+    public static final Color edgeColor = Color.RED;
+    private ArrayList<Side> edges = new ArrayList<>();
+    public EdgeCell(MazeCanvas mc, int row, int col) {
+        super(mc, row, col, edgeColor);
+        
+        if(row == 0 && col == 0) {
+        	edges.add(Side.Bottom);
+        	edges.add(Side.Right);
+        }
+        if(row == 0 )
+    }
+    
+}

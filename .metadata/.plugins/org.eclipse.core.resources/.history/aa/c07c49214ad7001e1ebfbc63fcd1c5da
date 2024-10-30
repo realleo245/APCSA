@@ -1,0 +1,29 @@
+import java.util.ArrayList;
+import java.util.List;
+
+import graphics.MazeCanvas;
+import graphics.MazeCanvas.Side;
+
+public class Cell {
+	private MazeCanvas mc;
+	private int row;
+	private int col;
+	private List<Side> listOfWalls;
+	public Cell(MazeCanvas mc, int row, int col) {
+		mc.drawCell(row, col);
+		this.row = row;
+		this.col = col;
+		listOfWalls = new ArrayList<>();
+		listOfWalls.add(Side.Top);
+		listOfWalls.add(Side.Left);
+		listOfWalls.add(Side.Right);
+		listOfWalls.add(Side.Bottom);
+	}
+	public int getRow() {
+		return row;
+	}
+	public int getCol() {
+		return col;
+	}
+	
+}

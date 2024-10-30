@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Change method &apos;public int Employee.getSalary()&apos; to &apos;public double getSalary()&apos;&#x0D;&#x0A;- Original project: &apos;Unit 6&apos;&#x0D;&#x0A;- Original element: &apos;Employee.getSalary()&apos;&#x0D;&#x0A;- New return type: &apos;double&apos;" delegate="false" deprecate="true" description="Change method &apos;getSalary&apos;" flags="589830" id="org.eclipse.jdt.ui.change.method.signature" input="/src&lt;{Employee.java[Employee~getSalary" name="getSalary" return="double" stamp="1708460511584" version="1.0"/>
+</session>

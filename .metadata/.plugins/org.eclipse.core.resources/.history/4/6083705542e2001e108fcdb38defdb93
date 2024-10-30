@@ -1,0 +1,31 @@
+import java.awt.Color;
+import java.util.ArrayList;
+
+import graphics.MazeCanvas;
+import graphics.MazeCanvas.Side;
+
+public class EdgeCell extends ShadedCell {
+    public static final Color edgeColor = Color.RED;
+    private ArrayList<Side> edges = new ArrayList<>();
+    public EdgeCell(MazeCanvas mc, int row, int col) {
+        super(mc, row, col, edgeColor);
+        
+        edges.add(Side.Top);
+        edges.add(Side.Bottom);
+        edges.add(Side.Left);
+        edges.add(Side.Right);
+        for(Side side : edges) {
+    		if(side == Side.Bottom) {
+    			if(row = mc.getRows() - 1) {
+    				edges.remove(Side.Bottom);
+    			}
+    		}
+    	}
+
+    }
+    
+    public ArrayList<Side> getEdges() {
+    	
+    }
+    
+}
